@@ -7,7 +7,7 @@ You will be given two arrays of integers and asked to determine all integers tha
 
 These numbers are referred to as being between the two arrays. You must determine how many such numbers exist.
 
-For example, given the arrays `a=[2,6]` and `b=[24,36]`, there are two numbers between them: `6` and `12`. `6%2 = 0` ,`12%6 = 0` , and `24%6 = 0` for the first value. Similarly, `12%2=0` , `12%6=0` and `24%12 = 0`,`36%12 = 0` .
+For example, given the arrays `a=[2,6]` and `b=[24,36]` , there are two numbers between them: `6` and `12` . `6%2 = 0` , `12%6 = 0` , and `24%6 = 0` for the first value. Similarly, `12%2=0` , `12%6=0` and `24%12 = 0` , `36%12 = 0` .
 
 ## Function Description
 
@@ -15,28 +15,28 @@ Complete the getTotalX function in the editor below. It should return the number
 
 getTotalX has the following parameter(s):
 
-- a: an array of integers
-- b: an array of integers
+* a: an array of integers
+* b: an array of integers
 
 ### Input Format
 
-The first line contains two space-separated integers, `n` and `m`, the number of elements in array `a` and the number of elements in array `b`.
-The second line contains `n` distinct space-separated integers describing `a[i]` where `0<=i<n`.
+The first line contains two space-separated integers, `n` and `m` , the number of elements in array `a` and the number of elements in array `b` .
+The second line contains `n` distinct space-separated integers describing `a[i]` where `0<=i<n` .
 The third line contains `m` distinct space-separated integers describing `b[j]` where `0<=j < m` .
 
 ### Constraints
 
-- `1 <= n, m<=10`
-- `1<= a[i] <= 100`
-- `1<=b[j]<= 100`
+* `1 <= n, m<=10`
+* `1<= a[i] <= 100`
+* `1<=b[j]<= 100`
 
 ### Output Format
 
-Print the number of integers that are considered to be between `a` and `b`.
+Print the number of integers that are considered to be between `a` and `b` .
 
 #### Sample Input
 
-```
+``` 
 2 3
 2 4
 16 32 96
@@ -45,7 +45,7 @@ Print the number of integers that are considered to be between `a` and `b`.
 
 #### Sample Output
 
-```
+``` 
 3
 ```
 
