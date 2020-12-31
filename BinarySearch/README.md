@@ -1,0 +1,2 @@
+javac BinarySearchRecursive.java
+java BinarySearchRecursive
