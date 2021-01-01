@@ -1,7 +1,7 @@
 # Sorting Algorithms
 
 ## Bubble Sort
-It is the simplest sort method which performs sorting by repeatedly moving the largest element to the highest index of the array. It comprises of comparing each element to its adjacent element and replace them accordingly.
+It is the simplest sort method which performs sorting by repeatedly moving the largest element to the highest index of the array. It comprises of comparing each element to its adjacent element and replace them accordingly. [Resource Link](https://www.javatpoint.com/bubble-sort)
 ## Bucket Sort
 Bucket sort is also known as bin sort. It works by distributing the element into the array also called buckets. In this sorting algorithms, Buckets are sorted individually by using different sorting algorithm.
 ## Comb Sort	
