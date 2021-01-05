@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class LinearSearch {
 
   private static int index = 0;

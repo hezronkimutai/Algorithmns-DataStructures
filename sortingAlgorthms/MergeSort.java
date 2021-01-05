@@ -1,6 +1,17 @@
 public class MergeSort {
 
   void merge(int arr[], int beg, int mid, int end) {
+    System.out.println();
+    System.out.println("First Line of fn");
+    for (int li : arr) {
+      System.out.print(li + " ");
+    }
+    System.out.println();
+    System.out.println(beg);
+    System.out.println(mid);
+    System.out.println(end);
+    System.out.println();
+
     int l = mid - beg + 1;
     int r = end - mid;
 
@@ -33,6 +44,9 @@ public class MergeSort {
       arr[k] = RightArray[j];
       j++;
       k++;
+    }
+    for (int ll : arr) {
+      System.out.print(ll + " ");
     }
   }
 
