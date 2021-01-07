@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class InsertionSort {
 
   public static void sort(int array[]) {
@@ -19,18 +21,38 @@ public class InsertionSort {
     }
   }
 
-  public static void main(String a[]) {
-    int[] arr1 = { 9, 14, 3, 2, 43, 11, 58, 22 };
-    System.out.println("Before Insertion Sort");
-    for (int i : arr1) {
-      System.out.print(i + " ");
+  // public static void main(String a[]) {
+  //   int[] arr1 = { 9, 14, 3, 2, 43, 11, 58, 22 };
+  //   System.out.println("Before Insertion Sort");
+  //   for (int i : arr1) {
+  //     System.out.print(i + " ");
+  //   }
+  //   System.out.println();
+  //   //Sort
+  //   sort(arr1);
+  //   System.out.println("After Insertion Sort");
+  //   for (int i : arr1) {
+  //     System.out.print(i + " ");
+  //   }
+  // }
+
+  public static void main(String[] args) {
+    Scanner commandReader = new Scanner(System.in);
+    System.out.println(
+      "Welcome to Java Program to perform insertion sort on int array"
+    );
+    System.out.println("Enter total number of elements : ");
+    int length = commandReader.nextInt();
+    int[] arr = new int[length];
+    System.out.printf("Enter %d integers %n", length);
+    for (int i = 0; i < length; i++) {
+      arr[i] = commandReader.nextInt();
     }
-    System.out.println();
-    //Sort
-    sort(arr1);
-    System.out.println("After Insertion Sort");
-    for (int i : arr1) {
-      System.out.print(i + " ");
+    sort(arr);
+    System.out.println("\nSorted array");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i] + "");
     }
+    commandReader.close();
   }
 }
