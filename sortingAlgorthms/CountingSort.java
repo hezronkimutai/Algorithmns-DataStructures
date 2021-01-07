@@ -1,3 +1,4 @@
+import java.util.*;
 import java.util.Arrays;
 
 class CountingSort {
@@ -42,12 +43,34 @@ class CountingSort {
   }
 
   // Driver code
-  public static void main(String args[]) {
-    int[] data = { 4, 2, 2, 8, 3, 3, 1 };
-    int size = data.length;
+  // public static void main(String args[]) {
+  //   int[] data = { 4, 2, 2, 8, 3, 3, 1 };
+  //   int size = data.length;
+  //   CountingSort cs = new CountingSort();
+  //   cs.countSort(data, size);
+  //   System.out.println("Sorted Array in Ascending Order: ");
+  //   System.out.println(Arrays.toString(data));
+  // }
+
+  public static void main(String[] args) {
+    Scanner commandReader = new Scanner(System.in);
+    System.out.println(
+      "Welcome to Java Program to perform insertion sort on int array"
+    );
+    System.out.println("Enter total number of elements : ");
+    int length = commandReader.nextInt();
+    int[] arr = new int[length];
+    System.out.printf("Enter %d integers %n", length);
+    for (int i = 0; i < length; i++) {
+      arr[i] = commandReader.nextInt();
+    }
+    int size = arr.length;
     CountingSort cs = new CountingSort();
-    cs.countSort(data, size);
-    System.out.println("Sorted Array in Ascending Order: ");
-    System.out.println(Arrays.toString(data));
+    cs.countSort(arr, size);
+    System.out.println("\nSorted array");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i] + "");
+    }
+    commandReader.close();
   }
 }
