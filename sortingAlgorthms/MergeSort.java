@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MergeSort {
 
   public static void merge(
@@ -51,13 +53,24 @@ public class MergeSort {
     merge(a, left, right, mid, n - mid);
   }
 
-  public static void main(String args[]) {
-    int arr[] = { 90, 23, 101, 45, 65, 23, 67, 89, 34, 23 };
-    MergeSort ob = new MergeSort();
-    ob.sort(arr, arr.length - 1);
-    System.out.println("\nSorted array");
-    for (int i = 0; i < arr.length; i++) {
-      System.out.println(arr[i] + "");
+  public static void main(String[] args) {
+    Scanner commandReader = new Scanner(System.in);
+    System.out.println(
+      "Welcome to Java Program to perform merge sort on int array"
+    );
+    System.out.println("Enter total number of elements : ");
+    int length = commandReader.nextInt();
+    int[] input = new int[length];
+    System.out.printf("Enter %d integers %n", length);
+    for (int i = 0; i < length; i++) {
+      input[i] = commandReader.nextInt();
     }
+    MergeSort ob = new MergeSort();
+    ob.sort(input, input.length - 1);
+    System.out.println("\nSorted array");
+    for (int i = 0; i < input.length; i++) {
+      System.out.println(input[i] + "");
+    }
+    commandReader.close();
   }
 }
