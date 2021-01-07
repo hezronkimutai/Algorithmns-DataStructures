@@ -3,14 +3,23 @@ import java.util.*;
 public class RadixSort {
 
   public static void main(String[] args) {
-    int i;
-    Scanner sc = new Scanner(System.in);
-    int[] a = { 90, 23, 101, 45, 65, 23, 67, 89, 34, 23 };
-    System.out.println("\n The sorted array is: \n");
-    for (i = 0; i < 10; i++) System.out.println(a[i]);
-    radix_sort(a);
-    System.out.println("\n The sorted array is: \n");
-    for (i = 0; i < 10; i++) System.out.println(a[i]);
+    Scanner commandReader = new Scanner(System.in);
+    System.out.println(
+      "Welcome to Java Program to perform radix sort on int array"
+    );
+    System.out.println("Enter total number of elements : ");
+    int length = commandReader.nextInt();
+    int[] arr = new int[length];
+    System.out.printf("Enter %d integers %n", length);
+    for (int i = 0; i < length; i++) {
+      arr[i] = commandReader.nextInt();
+    }
+    radix_sort(arr);
+    System.out.println("\nSorted array");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i] + "");
+    }
+    commandReader.close();
   }
 
   static int largest(int a[]) {
@@ -30,15 +39,13 @@ public class RadixSort {
       NOP++;
       larger /= 10;
     }
-    for (pass = 0; pass < NOP; pass++) { // Initialize the buckets
+    for (pass = 0; pass < NOP; pass++) {
       for (i = 0; i < 10; i++) bucket_count[i] = 0;
       for (i = 0; i < 10; i++) {
-        // sort the numbers according to the digit at passth place
         remainder = (a[i] / divisor) % 10;
         bucket[remainder][bucket_count[remainder]] = a[i];
         bucket_count[remainder] += 1;
       }
-      // collect the numbers after PASS pass
       i = 0;
       for (k = 0; k < 10; k++) {
         for (j = 0; j < bucket_count[k]; j++) {
