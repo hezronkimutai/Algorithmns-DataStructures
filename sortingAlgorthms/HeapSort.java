@@ -41,18 +41,23 @@ class HeapSort {
     }
   }
 
-  public static void main(String args[]) {
-    int[] arr = { 4, 2, 2, 8, 3, 3, 1 };
-
-    int n = arr.length;
-    System.out.println("Before Sort");
-    for (int el : arr) {
-      System.out.print(el + " ");
+  public static void main(String[] args) {
+    Scanner commandReader = new Scanner(System.in);
+    System.out.println(
+      "Welcome to Java Program to perform insertion sort on int array"
+    );
+    System.out.println("Enter total number of elements : ");
+    int length = commandReader.nextInt();
+    int[] arr = new int[length];
+    System.out.printf("Enter %d integers %n", length);
+    for (int i = 0; i < length; i++) {
+      arr[i] = commandReader.nextInt();
     }
     heapSort(arr);
-    System.out.println("After Sort");
-    for (int el : arr) {
-      System.out.print(el + " ");
+    System.out.println("\nSorted array");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i] + "");
     }
+    commandReader.close();
   }
 }
