@@ -1,0 +1,27 @@
+# Algorithm
+
+- Step 1: [INITIALIZE] SET LEFT = BEG, RIGHT = END, LOC = BEG, FLAG =
+- Step 2: Repeat Steps 3 to 6 while FLAG =
+- Step 3: Repeat while ARR[LOC] <=ARR[RIGHT]
+AND LOC != RIGHT
+SET RIGHT = RIGHT - 1
+[END OF LOOP]
+- Step 4: IF LOC = RIGHT
+SET FLAG = 1
+ELSE IF ARR[LOC] > ARR[RIGHT]
+SWAP ARR[LOC] with ARR[RIGHT]
+SET LOC = RIGHT
+[END OF IF]
+- Step 5: IF FLAG = 0
+Repeat while ARR[LOC] >= ARR[LEFT] AND LOC != LEFT
+SET LEFT = LEFT + 1
+[END OF LOOP]
+- Step 6:IF LOC = LEFT
+SET FLAG = 1
+ELSE IF ARR[LOC] < ARR[LEFT]
+SWAP ARR[LOC] with ARR[LEFT]
+SET LOC = LEFT
+[END OF IF]
+[END OF IF]
+- Step 7: [END OF LOOP]
+- Step 8: END
