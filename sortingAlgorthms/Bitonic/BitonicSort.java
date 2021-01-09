@@ -60,14 +60,4 @@ public class BitonicSort {
     }
     commandReader.close();
   }
-  // public static void main(String[] args) {
-  //   int arr[] = { 1, 10, 2, 3, 1, 23, 45, 21 };
-  //   int n = arr.length;
-  //   int i;
-  //   boolean order = true;
-  //   sort(arr, n, order);
-
-  //   System.out.println("Sorted array: \n");
-  //   for (i = 0; i < n; i++) System.out.println(arr[i]);
-  // }
 }
