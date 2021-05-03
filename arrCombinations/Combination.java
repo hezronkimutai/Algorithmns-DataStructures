@@ -3,30 +3,30 @@ import java.io.*;
 class Combination {
 
     static void combinationUtil(int arr[], int data[], int start,
-        int end, int index, int r) {
-        if (index == r) {
-            for (int j = 0; j < r; j++)
+        int end, int index, int itemsPerCombination) {
+        if (index == itemsPerCombination) {
+            for (int j = 0; j < itemsPerCombination; j++)
             System.out.print(data[j] + " ");
             System.out.println("");
             return;
         }
 
-        for (int i = start; i <= end && end - i + 1 >= r - index; i++)
+        for (int i = start; i <= end && end - i + 1 >= itemsPerCombination - index; i++)
         {
             data[index] = arr[i];
-            combinationUtil(arr, data, i + 1, end, index + 1, r);
+            combinationUtil(arr, data, i + 1, end, index + 1, itemsPerCombination);
         }
     }
 
-    static void printCombination(int arr[], int n, int r) {
-        int data[] = new int[r];
-        combinationUtil(arr, data, 0, n - 1, 0, r);
+    static void printCombination(int arr[], int arrLen, int itemsPerCombination) {
+        int data[] = new int[itemsPerCombination];
+        combinationUtil(arr, data, 0, arrLen - 1, 0, itemsPerCombination);
     }
 
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 5};
-        int r = 3;
-        int n = arr.length;
-        printCombination(arr, n, r);
+        int itemsPerCombination = 3;
+        int arrLen = arr.length;
+        printCombination(arr, arrLen, itemsPerCombination);
     }
 }
