@@ -31,7 +31,6 @@ function readLine() {
 
 function pickingNumbers(a) {
     const meetCriterion = [[]];
-    let chainBroken = false;
     for (let i = 0; i < a.length; i++) {
         const item1 = a[i];//4,5
         const lastItem = meetCriterion[meetCriterion.length - 1];
@@ -42,10 +41,6 @@ function pickingNumbers(a) {
             const item2 = a[j];
             const difference = Math.abs(item1 - item2);
             if (difference <= 1 && i !== j) {
-                const reverseDiff = lastItem[lastItem.length - 1] - item2;
-                // if (reverseDiff > 1) {
-                //     lastItem.pop();
-                // }
                 lastItem.push(item2);
             }
 
